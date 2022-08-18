@@ -30,7 +30,7 @@ jobs:
           - platform: ds918p
             version: 7.1.0-42661
           - platform: ds918p
-            version: 7.1.1-42951
+            version: 7.1.1-42951rc
 
     steps:
       - name: 检出项目文件
