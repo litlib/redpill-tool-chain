@@ -3,6 +3,9 @@
         "pid": "0x0001",
         "vid": "0x46f4",
         "sn": "1234XXX123",
+        "DiskIdxMap":"0002",
+        "SataPortMap":"22",
+        "SasIdxMap":"0",
         "mac1": "XXYYXXYYXXYY"
     },
     "synoinfo": {},
