@@ -67,8 +67,12 @@ jobs:
 
           # 添加第二张网卡mac并设置网卡数量
           #sed -i -e 's/7085C27739B0"/&,\n\t"mac2": "E41D2D710F51",\n\t"mac3": "00113212EED2",\n\t"netif_num": 3/' ${{matrix.platform}}_user_config.json
-          sed -i -e 's/7085C27739B0"/&,\n\t"mac2": "7085C27739B0",\n\t"mac3": "7085C2774444",\n\t"netif_num": 3/' ${{matrix.platform}}_user_config.json
-
+          
+          # do self
+          sed -i -e 's/5841202834EB"/&,\n\t"mac2": "7085C27739B0",\n\t"mac3": "7085C2774444",\n\t"netif_num": 3/' ${{matrix.platform}}_user_config.json
+          sed -i -e 's/"DiskIdxMap":"00",/"DiskIdxMap":"0002",' ${{matrix.platform}}_user_config.json
+          sed -i -e 's/"SataPortMap":"8",/"SataPortMap":"22",' ${{matrix.platform}}_user_config.json
+          
           # 调整synoinfo
           sed -i -e 's/"synoinfo": {},/"synoinfo": {\n\t"maxlanport": "3"\n    },/' ${{matrix.platform}}_user_config.json
 
